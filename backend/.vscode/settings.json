@@ -1,0 +1,10 @@
+{
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": false
+    },
+    "i18n-ally.localesPaths": [
+        "resources/lang"
+    ]
+}
