@@ -1,1 +1,55 @@
 # mobile_payment
+
+The objective of the system is to provide a solution to make payment of Bills and recharge the mobile using a single window system
+
+It has a frontend written with React.js and a backend written with Laravel.
+
+Installation This project has 2 subfolders, with each folder named according to its purpose.
+
+Setting up the backend In the backend folder run the command
+
+composer install
+
+This will install the necessary dependencies required for the project. It is recommended that you have PHP 7.4 installed on your machine. Also make a copy of the .env.example file into another file and name it .env.
+
+Run the command
+
+php artisan key:gen
+
+to generate an application key.
+
+Run the command
+
+php artisan jwt:secret
+
+to generate a secret key. This key is being used for authentication.
+
+This application uses MySQL for its database. To setup the database set values for the database name, database user and the database password in the .env file. An example is given below.
+
+DB_DATABASE=laravel
+
+DB_USERNAME=root
+
+DB_PASSWORD= To start the server run the command
+
+php artisan serve
+
+A message should be returned on the terminal showing the port that runs the service locally.
+
+Setting up the frontend In the frontend folder, run the command
+
+npm install
+
+This command would install all the necessary packages required to run this project.
+
+Also make a copy of the .env.example file into another file and name it .env.develop.
+
+Enter the value for the backend url and port in the .env.develop for REACT_APP_API_URL. E.g
+
+REACT_APP_API_URL="http://localhost:8000" Then run the command
+
+npm run start:dev
+
+This command starts the development server
+
+Setting Up the Admin Account After running the migrations and creating a user account, in the users table in the database set the value for the property is_admin to 1 for any user that you want to assign admin privileges. This will enable admin features for that user.
